@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="home.html"><b>HOME</b></a></li>
+            <li><a href="page1.html">Tree Planting</a></li>
+            <li><a href="page2.html">Coastal Cleaning</a></li>
+            <li><a href="page3.html">Sidewalk Clearing</a></li>
+        </ul>
+    </div>
+
+    <div class="images home-images">
+        <div class="overlay"></div>
+            <div class="image-text">
+        <h3>xxx</h3>
+        <h1>xxx</h1>
+            </div>
+        </div>
+
+    <div class="home-container">
+        <h2>Welcome to (name of site)</h2>
+
+        <p>Take up the task of beautifying your local beach, sidewalk, or vegetation area by signing up
+            now to become a volunteer! Join your fellow community members as we improve the appearance of 
+            these important everyday locations, ridding waste in the process.
+
+            Here's how you can take part:
+
+        </p>
+    </div>
+
+    <div class="carousel-container">
+        <button class="nav left">&#10094;</button>
+        
+        <div class="carousel">
+            <img src="https://agungconcern.co.id/wp-content/uploads/2023/12/Event-Less-Waste-Less-Toxic-Bali-2.jpg" class="carousel-image" />
+            <img src="https://rgo.ru/upload/content_block/images/9cdb40496c10e5aba2aebd1322b0882e/64dcc554deac3e158aa069223acf1ac02.jpg" class="carousel-image" />
+            <img src="https://kkp.go.id/storage/foto/foto-678f238bbf0ce.jpg" class="carousel-image" />
+        </div>
+
+        <button class="nav right">&#10095;</button>
+    </div>
+
+    <script>
+        const images = Array.from(document.querySelectorAll('.carousel-image'));
+        const carousel = document.querySelector('.carousel');
+        const leftBtn = document.querySelector('.nav.left');
+        const rightBtn = document.querySelector('.nav.right');
+        let current = 0;
+
+        function showImages() {
+            carousel.innerHTML = '';
+            const prev = images[(current - 1 + images.length) % images.length];
+            const curr = images[current];
+            const next = images[(current + 1) % images.length];
+
+            [prev, curr, next].forEach((img, i) => {
+            img.className = 'carousel-image';
+            if (i === 1) img.classList.add('active');
+            carousel.appendChild(img);
+            });
+        }
+
+        leftBtn.onclick = () => {
+            current = (current - 1 + images.length) % images.length;
+            showImages();
+        };
+
+        rightBtn.onclick = () => {
+            current = (current + 1) % images.length;
+            showImages();
+        };
+
+        // Mobile swipe support
+        let startX;
+        carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+        carousel.addEventListener('touchend', e => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) rightBtn.click();
+            if (endX - startX > 50) leftBtn.click();
+        });
+
+        showImages();
+    </script>
+
+
+</body>
+</html> 
