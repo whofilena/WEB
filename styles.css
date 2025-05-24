@@ -303,17 +303,20 @@ ul li {
 
 .volSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 40px 20px;
+  width: 90%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 .volContainer {
   flex: 1 1 200px; /* grow/shrink, minimum width */
   max-width: 400px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
   /*margin-left: 70px;*/
@@ -325,12 +328,15 @@ ul li {
   width: 100%;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
 
 .volImage {
   width: 100%;
   height: 200px;
-  height: auto;
   object-fit: cover;
   display: block;
 }
