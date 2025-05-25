@@ -5,28 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Coastal Cleaning</title>
+    <style>
+        
+    </style>
 </head>
 <body>
     <div class="navbar">
         <ul>
             <li><a href="home.html"><b>HOME</b></a></li>
-            <li><a href="page1.html">Tree Planting</a></li>
-            <li><a href="page2.html">Coastal Cleaning</a></li>
-            <li><a href="page3.html">Sidewalk Clearing</a></li>
         </ul>
     </div>
 
     <div class="images page2-images">
         <div class="overlay"></div>
-            <div class="image-text">
-        <h3>xxx</h3>
-        <h1>xxx</h1>
-            </div>
+        <div class="image-text">
+            <h3>xxx</h3>
+            <h1>xxx</h1>
+        </div>
+    </div>
+
+<div class="locContainer">
+    <div class="content-container">
+        <h2>Del Perro Beach</h2>
+        <p>Location: Los Santos County</p>
+        <p>One of Los Santos' frequented tourism spots. Help maintain the natural beauty 
+        of these white sands by volunteering to clear its coasts of trash!
+        </p>
+
+     
+        <div class="date-selector">
+        <label for="cleaning-date">Select a Date for Your Participation:</label>
+        <input type="date" id="cleaning-date" name="cleaning-date">
+        <button onclick="confirmDate()">Confirm</button>
+        <div id="confirmation" class="confirmation-message"></div>
+        </div>
+    </div>
+
+        <div class="content-container">
+        <h2>Sandy Shores Beach</h2>
+        <p>Location: Blaine County</p>
+        <p>Help beautify the coastline of Sandy Shores Beach by volunteering now!</p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <input type="date" id="cleaning-date" name="cleaning-date">
+            <button onclick="confirmDate()">Confirm</button>
+            <div id="confirmation" class="confirmation-message"></div>
+        </div>
     </div>
 
     <div class="content-container">
-        <h2>Coastal Clearing</h2>
-        <p>Beautify your local beach by clearing litter!</p>
+        <h2>Gabrielle Beach</h2>
+        <p>Help beautify Gabrielle Beach by volunteering to clear its coastlines of litter!</p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <input type="date" id="cleaning-date" name="cleaning-date">
+            <button onclick="confirmDate()">Confirm</button>
+            <div id="confirmation" class="confirmation-message"></div>
+        </div>
     </div>
+
+    <div class="content-container">
+        <h2>Gabrielle Beach</h2>
+        <p>Help beautify Gabrielle Beach by volunteering to clear its coastlines of litter!</p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <input type="date" id="cleaning-date" name="cleaning-date">
+            <button onclick="confirmDate()">Confirm</button>
+            <div id="confirmation" class="confirmation-message"></div>
+        </div>
+    </div>
+</div>
+    <script>
+        function confirmDate() {
+            const dateInput = document.getElementById('cleaning-date').value;
+            const confirmation = document.getElementById('confirmation');
+
+            if (dateInput) {
+                confirmation.textContent = `You have selected ${dateInput} for Coastal Cleaning, See ya!.`;
+            } else {
+                confirmation.textContent = 'Please select a date before confirming.';
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
