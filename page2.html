@@ -63,7 +63,7 @@
 </div>
 
 <div class="contact-button-container">
-        <button class="contact-us-button">Contact Us</button>
+        <button class="contact-us-button" onclick="contactForm()">Contact Us</button>
     </div>
 
 <div class="pageDivider">
@@ -72,8 +72,8 @@
     
 </div>
 
-
 <div class="locContainer">
+
     <div class="content-container">
         <img src="https://agungconcern.co.id/wp-content/uploads/2023/12/Event-Less-Waste-Less-Toxic-Bali-2.jpg" class="content-Image" />
         <h2>Del Perro Beach</h2>
@@ -84,11 +84,16 @@
 
      
         <div class="date-selector">
-        <label for="cleaning-date">Select a Date for Your Participation:</label>
-        <input type="date" id="cleaning-date" name="cleaning-date">
-        <button onclick="confirmDate()">Confirm</button>
-        <div id="confirmation" class="confirmation-message"></div>
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="June 5, 2025 5:30 PM - 7:30 PM">June 5, 2025 5:30 PM - 7:30 PM</option>
+                <option value="June 12, 2025 7:30 PM - 9:30 PM">June 12, 2025 7:30 PM - 9:30 PM</option>
+                <option value="June 19, 2025 4:30 PM - 6:30 PM">June 19, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
         </div>
+
     </div>
 
     <div class="content-container">
@@ -100,10 +105,15 @@
      
         <div class="date-selector">
             <label for="cleaning-date">Select a Date for Your Participation:</label>
-            <input type="date" id="cleaning-date" name="cleaning-date">
-            <button onclick="confirmDate()">Confirm</button>
-            <div id="confirmation" class="confirmation-message"></div>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="June 21, 2025 5:30 PM - 7:30 PM">June 21, 2025 5:30 PM - 7:30 PM</option>
+                <option value="June 24, 2025 7:30 PM - 9:30 PM">June 24, 2025 7:30 PM - 9:30 PM</option>
+                <option value="June 29, 2025 4:30 PM - 6:30 PM">June 29, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
         </div>
+
     </div>
 
     <div class="content-container">
@@ -114,10 +124,15 @@
      
         <div class="date-selector">
             <label for="cleaning-date">Select a Date for Your Participation:</label>
-            <input type="date" id="cleaning-date" name="cleaning-date">
-            <button onclick="confirmDate()">Confirm</button>
-            <div id="confirmation" class="confirmation-message"></div>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="July 1, 2025 5:30 PM - 7:30 PM">July 1, 2025 5:30 PM - 7:30 PM</option>
+                <option value="July 12, 2025 7:30 PM - 9:30 PM">July 12, 2025 7:30 PM - 9:30 PM</option>
+                <option value="July 28, 2025 4:30 PM - 6:30 PM">July 28, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
         </div>
+
     </div>
 
     <div class="content-container">
@@ -128,23 +143,49 @@
      
         <div class="date-selector">
             <label for="cleaning-date">Select a Date for Your Participation:</label>
-            <input type="date" id="cleaning-date" name="cleaning-date">
-            <button onclick="confirmDate()">Confirm</button>
-            <div id="confirmation" class="confirmation-message"></div>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="August 7, 2025 5:30 PM - 7:30 PM">August 7, 2025 5:30 PM - 7:30 PM</option>
+                <option value="August 12, 2025 7:30 PM - 9:30 PM">August 12, 2025 7:30 PM - 9:30 PM</option>
+                <option value="August 19, 2025 4:30 PM - 6:30 PM">August 19, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
         </div>
+
     </div>
 </div>
     <script>
-        function confirmDate() {
-            const dateInput = document.getElementById('cleaning-date').value;
-            const confirmation = document.getElementById('confirmation');
+        function confirmDate(button) {
+            const container = button.closest('.date-selector');
+            const select = container.querySelector('.cleaning-date');
+            const selectedDate = select.value;
 
-            if (dateInput) {
-                confirmation.textContent = `You have selected ${dateInput} for Coastal Cleaning, See ya!.`;
+            if (selectedDate) {
+                alert(`You have been added to the list of volunteers for ${selectedDate}. See you soon!`);
+                window.location.href = "home.html";
             } else {
-                confirmation.textContent = 'Please select a date before confirming.';
+                alert("Please select a date before confirming.");
             }
         }
+
+
+        function contactForm() {
+            const name = prompt("Please enter your mobile number:");
+            if (!name) {
+                alert("Contact information is required.");
+                return;
+            }
+
+            const inquiry = prompt("Please enter your inquiry (will be sent to @stewardsofnature@gmail.com):");
+            if (!inquiry) {
+                alert("Inquiry is required.");
+                return;
+            }
+
+            alert(`Thank you, ${name}. We’ve received your message:\n\n"${inquiry}" \n\nWe will get back to you at our earliest convenience!`);
+        }
+            
+        
     </script>
 </body>
 </html>
