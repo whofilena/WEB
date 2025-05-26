@@ -245,7 +245,8 @@ body {
   background-color: rgb(87, 137, 179); 
   height: 100%;
   width: 100%;
-  padding-left: 15px;
+  max-width: 1800px;
+  padding-left: 20px;
   padding-top: 2px;
   padding-bottom: 2px;
   margin: 0px auto;
@@ -284,9 +285,7 @@ body {
   display: block;
 }
 
-.date-selector label {
-    font-weight: bold;
-}
+
 
 .confirmation-message {
   margin-top: 10px;
@@ -300,14 +299,31 @@ body {
     align-items: center;
 }
 
+.date-selector label {
+  width: 100%;
+  text-align: left;  
+  font-weight: bold;
+}
+
+.date-selector select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
 .date-selector button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(76, 174, 76);
+  background-color: rgb(44, 127, 196);
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.date-selector button:hover { 
+  background-color: rgb(41, 119, 182);
 }
 
 /*TEXT*/
