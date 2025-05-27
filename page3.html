@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Sidewalk Clearing</title>
+    <title>Sidewalk Clean-up</title>
 </head>
 <body>
     <div class="navbar">
         <ul>
             <li><a href="home.html"><b>HOME</b></a></li>
-            <li><a href="page1.html">Tree Planting</a></li>
-            <li><a href="page2.html">Coastal Cleaning</a></li>
-            <li><a href="page3.html">Sidewalk Clearing</a></li>
         </ul>
     </div>
 
@@ -24,9 +21,175 @@
             </div>
         </div>
 
-    <div class="content-container">
-        <h2>Sidewalk Clearing</h2>
-        <p>Get involved in making sidewalks walkable again!</p>
+    <div class="infoContainer">
+    <div class="info-dump">
+        <div class="home-text">
+            <h2>Aren't you tired of all the trash littering the streets as you walk home?</h2>
+
+            <p>We have various locations where we regularly operate and offer opportunities
+                for those who are willing to participate in coastal cleanups whenever they want.
+            </p>
+
+            <p>
+                Become a volunteer today and join our thriving community of like-minded, passionate
+                 individuals who also wish to beautify these valuable coasts!
+            </p>
+
+            <p>
+                We are accepting anyone as long as they have the drive for taking action! Whether or not
+                 it's your first time volunteering, you can rest assured that this experience will be 
+                 valuable. This is an opportunity for you to contribute to your local community while 
+                 at the same time make new connections!
+            </p>
+
+            <p>
+                If you are interested, check out our available locations below and select the date and
+            time you wish to join us! After which, you will be added to our list of participants for that 
+            specific date and timeframe. 
+            </p>
+
+            <p>Below is where you can contact us for any inquiries:</p>
+        </div>
     </div>
+
+    
+
+    <img src="https://www.dmcihomes.com/uploads/news/dmci-homes-guadalupe-viejo-csr-committee-x154823.jpg" class = "info-image" />
+    
+</div>
+
+<div class="contact-button-container">
+        <button class="contact-us-button" onclick="contactForm()">Contact Us</button>
+    </div>
+
+<div class="pageDivider">
+    
+    <h2>Our Locations</h2>
+    
+</div>
+
+<div class="locContainer">
+
+    <div class="content-container">
+        <img src="https://files01.pna.gov.ph/ograph/2021/09/06/053a7731.jpg" class="content-Image" />
+        <h2>Elm Street</h2>
+        <p>Location: Bacolod City</p>
+        <p>One of Los Santos' frequented tourism spots. Help maintain the natural beauty 
+        of these white sands by volunteering to clear its coasts of trash!
+        </p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="June 10, 2025 5:30 PM - 7:30 PM">June 10, 2025 5:30 PM - 7:30 PM</option>
+                <option value="June 25, 2025 7:30 PM - 9:30 PM">June 25, 2025 7:30 PM - 9:30 PM</option>
+                <option value="June 30, 2025 4:30 PM - 6:30 PM">June 30, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
+        </div>
+
+    </div>
+
+    <div class="content-container">
+        <img src="https://files.pna.gov.ph/source/2018/10/21/053a9744.jpg" class="content-Image" />
+        <h2>Sandy Shores Beach</h2>
+        <p>Location: Blaine County</p>
+        <p>Help beautify the coastline of Sandy Shores Beach by volunteering now!</p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="June 26, 2025 5:30 PM - 7:30 PM">June 26, 2025 5:30 PM - 7:30 PM</option>
+                <option value="June 28, 2025 7:30 PM - 9:30 PM">June 28, 2025 7:30 PM - 9:30 PM</option>
+                <option value="June 29, 2025 4:30 PM - 6:30 PM">June 29, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
+        </div>
+
+    </div>
+
+    <div class="content-container">
+        <img src="https://files.pna.gov.ph/source/2019/08/11/053a6159.jpg" class="content-Image" />
+        <h2>Gabrielle Beach</h2>
+        <p>Help beautify Gabrielle Beach by volunteering to clear its coastlines of litter!</p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="July 9, 2025 5:30 PM - 7:30 PM">July 9, 2025 5:30 PM - 7:30 PM</option>
+                <option value="July 21, 2025 7:30 PM - 9:30 PM">July 21, 2025 7:30 PM - 9:30 PM</option>
+                <option value="July 25, 2025 4:30 PM - 6:30 PM">July 25, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
+        </div>
+
+    </div>
+
+    <div class="content-container">
+        <img src="https://pbs.twimg.com/media/FDeiyAmVcAQx_iL.jpg" class="content-Image" />
+        <h2>Gabrielle Beach</h2>
+        <p>Help beautify Gabrielle Beach by volunteering to clear its coastlines of litter!</p>
+
+     
+        <div class="date-selector">
+            <label for="cleaning-date">Select a Date for Your Participation:</label>
+            <select class="cleaning-date">
+                <option value="">Select a date</option>
+                <option value="August 4, 2025 5:30 PM - 7:30 PM">August 4, 2025 5:30 PM - 7:30 PM</option>
+                <option value="August 5, 2025 7:30 PM - 9:30 PM">August 5, 2025 7:30 PM - 9:30 PM</option>
+                <option value="August 15, 2025 4:30 PM - 6:30 PM">August 15, 2025 4:30 PM - 6:30 PM</option>
+            </select>
+            <button onclick="confirmDate(this)">Confirm</button>
+        </div>
+
+    </div>
+</div>
+    <script>
+        function confirmDate(button) {
+            const container = button.closest('.date-selector');
+            const select = container.querySelector('.cleaning-date');
+            const selectedDate = select.value;
+
+            if (selectedDate) {
+                alert(`You have been added to the list of volunteers for ${selectedDate}. See you soon!`);
+                window.location.href = "home.html";
+            } else {
+                alert("Please select a date before confirming.");
+            }
+        }
+
+
+        function contactForm() {
+            const name = prompt("Please enter your mobile number:");
+            if (!name) {
+                alert("Contact information is required.");
+                return;
+            }
+
+            const inquiry = prompt("Please enter your inquiry (will be sent to @stewardsofnature@gmail.com):");
+            if (!inquiry) {
+                alert("Inquiry is required.");
+                return;
+            }
+
+            alert(`Thank you, ${name}. We’ve received your message:\n\n"${inquiry}" \n\nWe will get back to you at our earliest convenience!`);
+        }
+            
+        
+    </script>
+
+    <small style="display: block; text-align: center; margin-top: 20px; color: gray;">
+Images courtesy of 
+<a href="https://www.dmcihomes.com" target="_blank">DMCI Homes</a>, 
+<a href="https://pna.gov.ph" target="_blank">Philippine News Agency</a>, and 
+<a href="https://twitter.com" target="_blank">Twitter</a>. Used for educational purposes only.
+</small>
+
 </body>
 </html> 
