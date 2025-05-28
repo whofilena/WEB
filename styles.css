@@ -192,17 +192,17 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  width: 90%;
+  width: 80%;
   max-width: 1400px;
   margin: 0px auto;
-  flex-wrap: wrap; /* enables mobile stacking */
+  flex-wrap: wrap;
 }
 
 .info-dump {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 80%;
   max-width: 500px;
   height: 100%;
   max-height: 700px;
@@ -211,7 +211,7 @@ body {
   background:rgb(87, 137, 179);
   color: white;
   /*font-size: 1.2rem;*/
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Correct syntax */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .info-image {
@@ -341,6 +341,10 @@ input {
     padding: 10px;
     margin: 10px 0;
     box-sizing: border-box;
+}
+
+.roundBtn {
+  border-radius: 20px;
 }
 
 button {
@@ -498,6 +502,7 @@ ul li {
     color: white;
     border: none;
     padding: 10px 15px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -517,6 +522,7 @@ small {
 
   .image-text h3 {
     font-size: 1.2rem;
+    font-weight:lighter;
   }
 
   .content-container {
